@@ -26,7 +26,7 @@ export const business = {
   phoneDisplay2: "+91 87269 99777", // second phone (shown on screen)
   phoneDial2: "+918726999777", // second phone, no spaces (for the call button)
   whatsapp: "919696501938", // WhatsApp number — booking enquiries go here (country code, no +, no spaces)
-  instagram: "https://www.instagram.com/sriumamaheswarayatraniwas", // REPLACE if handle differs
+  instagram: "https://www.instagram.com/sriumamaheswarayatraniwas", // confirmed handle
   email: "umamaheswarayatraniwas@gmail.com", // REPLACE if you have a different email
   // Full address (from your logo)
   addressLine: "D.No. 28/176, Pandey Haveli, Bengali Tola, Near Bholagiri Ashram, Varanasi – 221001, Uttar Pradesh",
