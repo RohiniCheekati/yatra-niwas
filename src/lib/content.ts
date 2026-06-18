@@ -21,11 +21,11 @@ export type Lang = "en" | "te";
 
 // Your real-world business details (used in links, map, SEO).
 export const business = {
-  phoneDisplay: "+91 96965 01938", // primary phone (shown on screen)
-  phoneDial: "+919696501938", // primary phone, no spaces (for the call button)
-  phoneDisplay2: "+91 87269 99777", // second phone (shown on screen)
-  phoneDial2: "+918726999777", // second phone, no spaces (for the call button)
-  whatsapp: "919696501938", // WhatsApp number — booking enquiries go here (country code, no +, no spaces)
+  phoneDisplay: "+91 87269 99777", // primary phone (shown on screen)
+  phoneDial: "+918726999777", // primary phone, no spaces (for the call button)
+  phoneDisplay2: "+91 96965 01938", // second phone (shown on screen)
+  phoneDial2: "+919696501938", // second phone, no spaces (for the call button)
+  whatsapp: "918726999777", // WhatsApp number — booking enquiries go here (country code, no +, no spaces)
   instagram: "https://www.instagram.com/sriumamaheswarayatraniwas", // confirmed handle
   email: "umamaheswarayatraniwas@gmail.com", // REPLACE if you have a different email
   // Full address (from your logo)
@@ -244,6 +244,15 @@ export const site = {
     ],
     submit: { en: "Send enquiry on WhatsApp", te: "వాట్సాప్‌లో విచారణ పంపండి" },
     required: { en: "Please fill your name, phone and check-in date.", te: "దయచేసి మీ పేరు, ఫోన్, రాక తేదీ నింపండి." },
+    availabilityNote: {
+      en: "This is an enquiry, not a confirmed booking — rooms are subject to availability. We'll reply on WhatsApp to confirm.",
+      te: "ఇది ఒక విచారణ మాత్రమే, నిర్ధారిత బుకింగ్ కాదు — గదుల లభ్యతను బట్టి ఉంటుంది. మేము వాట్సాప్‌లో నిర్ధారిస్తాం.",
+    },
+    sameDay: {
+      en: "Need a room today? Please call us directly for the fastest answer.",
+      te: "ఈ రోజే గది కావాలా? వెంటనే సమాధానం కోసం నేరుగా కాల్ చేయండి.",
+    },
+    callNow: { en: "Call now", te: "ఇప్పుడే కాల్ చేయండి" },
   },
 
   contact: {

@@ -19,6 +19,8 @@ import SectionHeading from "./SectionHeading";
 export default function BookingForm() {
   const { lang } = useLang();
   const t = site.booking;
+  // Today's date in YYYY-MM-DD — used to block past dates in the date picker.
+  const today = new Date().toISOString().split("T")[0];
 
   // One piece of state per field.
   const [form, setForm] = useState({
@@ -71,7 +73,18 @@ export default function BookingForm() {
     <section id="book" className="bg-cream-dark py-20">
       <div className="mx-auto max-w-3xl px-4">
         <SectionHeading eyebrow={t.eyebrow[lang]} title={t.title[lang]} />
-        <p className="mx-auto -mt-6 mb-8 max-w-xl text-center text-ink/75">{t.body[lang]}</p>
+        <p className="mx-auto -mt-6 mb-5 max-w-xl text-center text-ink/75">{t.body[lang]}</p>
+
+        {/* Availability notice + same-day call — so guests know a room isn't guaranteed */}
+        <div className="mx-auto mb-8 max-w-xl rounded-xl border border-gold/40 bg-saffron/10 p-4 text-center text-sm text-ink/80">
+          <p>ℹ️ {t.availabilityNote[lang]}</p>
+          <p className="mt-2">
+            {t.sameDay[lang]}{" "}
+            <a href={`tel:${business.phoneDial}`} className="font-semibold text-maroon underline">
+              📞 {t.callNow[lang]} ({business.phoneDisplay})
+            </a>
+          </p>
+        </div>
 
         <form
           onSubmit={handleSubmit}
@@ -99,13 +112,13 @@ export default function BookingForm() {
             {/* Check-in */}
             <div>
               <label className={label} htmlFor="checkin">{t.fields.checkin[lang]} *</label>
-              <input id="checkin" type="date" className={input} value={form.checkin} onChange={(e) => update("checkin", e.target.value)} />
+              <input id="checkin" type="date" min={today} className={input} value={form.checkin} onChange={(e) => update("checkin", e.target.value)} />
             </div>
 
             {/* Check-out */}
             <div>
               <label className={label} htmlFor="checkout">{t.fields.checkout[lang]}</label>
-              <input id="checkout" type="date" className={input} value={form.checkout} onChange={(e) => update("checkout", e.target.value)} />
+              <input id="checkout" type="date" min={form.checkin || today} className={input} value={form.checkout} onChange={(e) => update("checkout", e.target.value)} />
             </div>
 
             {/* Room type */}
