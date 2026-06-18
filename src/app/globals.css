@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/*
+  ──────────────────────────────────────────────────────────────
+  DESIGN SYSTEM  (the "brand" of the website)
+  Every colour the site uses is named here ONCE. Change a value
+  here and it updates everywhere — this is how brands stay
+  consistent. Then in the HTML you write classes like
+  `bg-saffron`, `text-maroon`, `border-gold`.
+  ──────────────────────────────────────────────────────────────
+*/
+@theme {
+  --color-saffron: #e07b17;        /* main accent – marigold / temple saffron */
+  --color-saffron-light: #f4a93d;
+  --color-maroon: #6e1614;         /* deep temple red – headings, footer */
+  --color-maroon-dark: #46100f;
+  --color-gold: #c49a3a;           /* gold lines & dividers */
+  --color-gold-light: #e6c56a;
+  --color-cream: #fbf5e9;          /* soft page background */
+  --color-cream-dark: #f1e4cb;
+  --color-ink: #2b211a;            /* main text colour (warm near-black) */
+}
+
+:root {
+  --background: var(--color-cream);
+  --foreground: var(--color-ink);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* Body text = Inter; any Telugu letters fall back to Noto Sans Telugu */
+  font-family: var(--font-body), var(--font-telugu), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings = elegant serif; Telugu letters fall back gracefully */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display), var(--font-telugu), Georgia, serif;
+}
+
+::selection {
+  background: var(--color-saffron);
+  color: #fff;
+}
+
+/* Small decorative ❋ divider used between sections */
+.divider-mark::before {
+  content: "❋";
+  color: var(--color-gold);
+  display: block;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/*
+  ── ANIMATIONS ──
+  fadeUp  : sections gently rise + fade in when scrolled into view
+  floaty  : the hero logo softly floats up and down
+  Respects "reduce motion" accessibility setting.
+*/
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+.reveal { opacity: 0; }
+.reveal.in-view { animation: fadeUp 0.7s ease-out forwards; }
+.animate-floaty { animation: floaty 4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.in-view { opacity: 1; animation: none; }
+  .animate-floaty { animation: none; }
+}
