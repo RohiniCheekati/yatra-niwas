@@ -29,7 +29,9 @@ const telugu = Noto_Sans_Telugu({
   "rooms near Kashi Vishwanath" or "annadanam Varanasi".
 */
 export const metadata: Metadata = {
-  metadataBase: new URL("https://umamaheswarayatraniwas.com"),
+  // 👉 Your live website address. After you buy a custom domain,
+  //    change this ONE line to e.g. "https://umamaheswarayatraniwas.com".
+  metadataBase: new URL("https://yatra-niwas.vercel.app"),
   title: {
     default: "Sri Uma Maheswara Yatra Niwas | Pilgrim Rooms & Free Annadanam in Varanasi (Kashi)",
     template: "%s | Sri Uma Maheswara Yatra Niwas",
@@ -66,7 +68,7 @@ const jsonLd = {
   name: "Sri Uma Maheswara Yatra Niwas",
   description:
     "Pilgrim guest house with clean rooms and daily free Annadanam in Varanasi (Kashi).",
-  image: "https://umamaheswarayatraniwas.com/images/logo.png",
+  image: "https://yatra-niwas.vercel.app/images/logo.png",
   address: {
     "@type": "PostalAddress",
     streetAddress: "D.No. 28/176, Pandey Haveli, Bengali Tola",
