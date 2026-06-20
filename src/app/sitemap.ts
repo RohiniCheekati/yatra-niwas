@@ -5,7 +5,7 @@ import type { MetadataRoute } from "next";
 // (After you buy a custom domain, update the URL in layout.tsx — this
 //  file picks it up automatically.)
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://sriumamaheswarayatraniwas.com";
+  const base = "https://www.sriumamaheswarayatraniwas.com";
   return [
     {
       url: base,
