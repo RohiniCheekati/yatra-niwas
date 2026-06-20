@@ -5,7 +5,7 @@ import type { MetadataRoute } from "next";
 // (After you buy a custom domain, update the URL in layout.tsx — this
 //  file picks it up automatically.)
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://yatra-niwas.vercel.app";
+  const base = "https://sriumamaheswarayatraniwas.com";
   return [
     {
       url: base,
