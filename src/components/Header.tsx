@@ -13,6 +13,7 @@ const links = [
   { id: "annadanam", label: site.nav.annadanam },
   { id: "services", label: site.nav.services },
   { id: "packages", label: site.nav.packages },
+  { id: "reviews", label: site.nav.reviews },
   { id: "kashi", label: site.nav.kashi },
   { id: "contact", label: site.nav.contact },
 ];

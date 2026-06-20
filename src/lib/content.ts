@@ -46,6 +46,7 @@ export const site = {
     annadanam: { en: "Annadanam", te: "అన్నదానం" },
     services: { en: "Services", te: "సేవలు" },
     packages: { en: "Packages", te: "ప్యాకేజీలు" },
+    reviews: { en: "Reviews", te: "అభిప్రాయాలు" },
     kashi: { en: "Kashi", te: "కాశీ" },
     contact: { en: "Contact", te: "సంప్రదించండి" },
     book: { en: "Book a Stay", te: "గది బుక్ చేయండి" },
@@ -219,6 +220,17 @@ export const site = {
       { src: "/images/kashi/ghat-sunset.jpg", label: { en: "Sunset by the Ghats", te: "ఘాట్‌ల వద్ద సూర్యాస్తమయం" } },
     ],
     photosNote: { en: "Kashi photos: Wikimedia Commons", te: "కాశీ ఫోటోలు: వికీమీడియా కామన్స్" },
+  },
+
+  reviews: {
+    eyebrow: { en: "Guest Reviews", te: "అతిథుల అభిప్రాయాలు" },
+    title: { en: "What pilgrims say about us", te: "యాత్రికులు మా గురించి ఏమంటున్నారు" },
+    body: {
+      en: "Hear directly from pilgrims who stayed with us in Kashi.",
+      te: "కాశీలో మాతో బస చేసిన యాత్రికుల మాటలు నేరుగా వినండి.",
+    },
+    video: "/videos/people_feedback.mp4",
+    cta: { en: "Play review", te: "అభిప్రాయం వినండి" },
   },
 
   booking: {

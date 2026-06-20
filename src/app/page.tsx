@@ -14,6 +14,7 @@ import Services from "@/components/Services";
 import Packages from "@/components/Packages";
 import Highlight from "@/components/Highlight";
 import KashiGallery from "@/components/KashiGallery";
+import Reviews from "@/components/Reviews";
 import BookingForm from "@/components/BookingForm";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -32,6 +33,7 @@ export default function Home() {
         <Packages />
         <Highlight />
         <KashiGallery />
+        <Reviews />
         <BookingForm />
         <Contact />
       </main>
